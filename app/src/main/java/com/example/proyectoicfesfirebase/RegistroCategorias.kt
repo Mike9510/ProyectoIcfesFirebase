@@ -24,9 +24,11 @@ class RegistroCategorias : AppCompatActivity() {
         Firebase.initialize(this)
 
         binding.btnGuardarCategoria.setOnClickListener{
+            // guardaremos la categoria
             guardarCategoria()
+
             VeractividadCategoria()
-            
+
     }
 
     }
