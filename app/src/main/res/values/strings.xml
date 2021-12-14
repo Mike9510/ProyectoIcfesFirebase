@@ -1,5 +1,62 @@
 <resources>
     <string name="app_name">ProyectoIcfesFirebase</string>
+
+    <string name="text_user">Usuario: </string>
+    <string name="text_pass">Contraseña: </string>
+    <string name="hint_pass">Contraseña propia</string>
+    <string name="hint_user">correo@ejemplo.com</string>
+    <string name="text_welcome">Bienvenid(@)</string>
+    <string name="text_noregis">¿No tienes cuenta?</string>
+    <string name="user">Manuel</string>
+
+    <string name="txt_nombre">Nombres:</string>
+    <string name="txt_apellido">Apellidos:</string>
+    <string name="txt_ident">Numero de identificación:</string>
+    <string name="txt_tel">Telefono:</string>
+    <string name="txt_correo">Correo electrónico:</string>
+    <string name="txt_rol">Rol:</string>
+    <string-array name="opcionesRol">
+        <item>Estudiante</item>
+        <item>Profesor</item>
+    </string-array>
+    <string-array name="opcionesCategoria">
+        <item>Matematicas</item>
+        <item>Lectura critica</item>
+        <item>Sociales y ciudadania</item>
+        <item>Ciencias naturales</item>
+        <item>Ingles</item>
+    </string-array>
+
+    <string name="txt_tituloterm">Terminos y condiciones</string>
+    <string name="txt_terminos">
+        1.Copyright. Está prohibida la reproducción total o parcial, traducción, inclusión,
+        transmisión, almacenamiento o acceso a través de medios analógicos, digitales o de
+        cualquier otro sistema o tecnología creada o por crearse, sin autorización previa y
+        escrita de MisionTic.
+        2.Informacion personal. la aplicacion recolecta información personal de sus usuarios
+        para garantizar algunas de sus actividades. El Usuario reconoce que el ingreso de
+        información personal, lo realiza de manera voluntaria y ante la solicitud de
+        requerimientos específicos MisionTic.
+    </string>
+    <string name="txt_aceptar">Aceptar</string>
+
+    <string name="txt_tituloReg">Usuario Registrado!!</string>
+    <string name="txt_logueo">Volver a la ventana de inicio de sesiòn</string>
+    <string name="txt_positivo">SI</string>
+    <string name="txt_negativo">NO</string>
+    <string name="txt_vacio">Los campos no pueden estar vacios</string>
+
+    <string name="txt_errorTerm">No cumple los terminos y condiciones</string>
+    <string name="txt_errorCorreo">Direccion de correo no valida</string>
+    <string name="txt_errorClave">
+        Contraseña no cumple politicas:\n
+        - debe tener como mínimo de 8 caracteres
+        - debe contener caracteres alfanumericos
+        - debe tener al menos una letra mayuscula
+        - debe tener al menos un caracter especial @!%*?
+    </string>
+    <string name="txt_tituloDel">Esta Seguro?</string>
+    <string name="txt_Del">El registro se borrara de forma permanente!</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

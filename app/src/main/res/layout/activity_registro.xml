@@ -5,30 +5,176 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="20dp"
+    android:layout_margin="10dp"
     tools:context=".RegistroActivity">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Correo"
-        android:singleLine="true"
-        android:inputType="textEmailAddress"
-        android:id="@+id/edtEmailRegistro"
-        />    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Contraseña"
-        android:singleLine="true"
-        android:inputType="textPassword"
-        android:id="@+id/edtPassRegistro"
-        />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Guardar"
-        android:id="@+id/btnGuardarUsuario"
-        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="120dp"
+            android:src="@drawable/futuro"
+            android:layout_margin="20dp"/>
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="120dp"
+            android:src="@drawable/icfes"
+            android:layout_margin="20dp"/>
+    </LinearLayout>
 
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:layout_margin="20dp"
+        android:gravity="center_vertical">
+
+        <TableRow>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/txt_nombre"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+            <EditText
+                android:id="@+id/edtNombre"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/txt_apellido"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+            <EditText
+                android:id="@+id/edtApellido"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/txt_ident"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+            <EditText
+                android:id="@+id/edtIdentificacion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:digits="0123456789"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/txt_tel"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+            <EditText
+                android:id="@+id/edtTelefono"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:digits="0123456789"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/txt_correo"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+            <EditText
+                android:id="@+id/edtEmailRegistro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:singleLine="true"
+                android:inputType="textEmailAddress"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/text_pass"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+            <EditText
+                android:id="@+id/edtPassRegistro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:singleLine="true"
+                android:inputType="textPassword" />
+        </TableRow>
+
+        <TableRow
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/txt_rol"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+            <Spinner
+                android:id="@+id/spRol"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="3" />
+        </TableRow>
+
+        <TableRow>
+            <CheckBox
+                android:id="@+id/chkTerminos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Acepto los"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="30dp"/>
+            <Button
+                android:id="@+id/btnTerminos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Terminos y Condiciones"
+                android:textAllCaps="false"
+                android:background="#0000"
+                android:textColor="@color/blue_500"/>
+        </TableRow>
+
+        <Button
+            android:id="@+id/btnGuardarUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Registrarse"/>
+
+    </TableLayout>
 
 </LinearLayout>

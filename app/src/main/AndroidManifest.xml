@@ -10,16 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoIcfesFirebase">
         <activity
-            android:name=".EditActivity"
+            android:name=".PuntajeActivity"
             android:exported="false" />
         <activity
-            android:name=".RegistroCategorias"
+            android:name=".TestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SecondActivity"
             android:exported="false" />
         <activity
             android:name=".RegistroActivity"
-            android:exported="false" />
-        <activity
-            android:name=".CategoriasMainActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

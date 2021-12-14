@@ -11,24 +11,29 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
+
     private lateinit var auth: FirebaseAuth
     private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         auth = Firebase.auth
+
         binding.btnLogin.setOnClickListener{
-        login(binding.edtEmail.text.toString(),binding.edtPass.text.toString())
-
-
+            login(binding.edtEmail.text.toString(),binding.edtPass.text.toString())
             //Toast.makeText(this,binding.edtEmail.text.toString(),Toast.LENGTH_LONG).show()
+            /*supportFragmentManager.beginTransaction()
+                .setReorderingAllowed(true)
+                .add(R.id.fragment_container_view, ProfesorFragment::class.java,null,"Profesor")
+                .commit()*/
         }
+
         binding.btnRegistrarUsuario.setOnClickListener{
             VerRegistroUsuario()
             //Toast.makeText(this,binding.edtEmail.text.toString(),Toast.LENGTH_LONG).show()
         }
-
     }
 
     private fun VerRegistroUsuario() {
@@ -40,16 +45,13 @@ class MainActivity : AppCompatActivity() {
         auth.signInWithEmailAndPassword(email, pass)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-
                     val user = auth.currentUser
-                    veractividadCategoria()
+                    verSegundaActividad()
                     Toast.makeText(baseContext, "Authentication Successfull.",
                         Toast.LENGTH_SHORT).show()
-
                 } else {
                     Toast.makeText(baseContext, "Authentication Failed  .",
                         Toast.LENGTH_SHORT).show()
-
                     //updateUI(null)
                 }
             }
@@ -59,11 +61,11 @@ class MainActivity : AppCompatActivity() {
         // Check if user is signed in (non-null) and update UI accordingly.
         val currentUser = auth.currentUser
         if(currentUser != null){
-            veractividadCategoria()
+            verSegundaActividad()
         }
     }
-    private fun veractividadCategoria(){
-        val intent = Intent(this, CategoriasMainActivity::class.java)
+    private fun verSegundaActividad(){
+        val intent = Intent(this, SecondActivity::class.java)
         this.startActivity(intent)
 
     }
