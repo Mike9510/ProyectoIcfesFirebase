@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    tools:context=".DetallePreguntasFragment">
+
+    <EditText
+        android:id="@+id/edtDetId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:text="Area:"
+            android:layout_marginStart="5dp"/>
+        <Spinner
+            android:id="@+id/spCategoria"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="3"/>
+    </LinearLayout>
+    <EditText
+        android:id="@+id/edtDetEnunciado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enunciado de la pregunta"/>
+    <EditText
+        android:id="@+id/edtDetOpcion1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Opcion 1"/>
+    <EditText
+        android:id="@+id/edtDetOpcion2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Opcion 2"/>
+    <EditText
+        android:id="@+id/edtDetOpcion3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Opcion 3"/>
+    <EditText
+        android:id="@+id/edtDetRespuesta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Respuesta"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnActualizarP"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:text="Actualizar"/>
+        <Button
+            android:id="@+id/btnEliminarP"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:text="Eliminar"/>
+    </LinearLayout>
+</LinearLayout>

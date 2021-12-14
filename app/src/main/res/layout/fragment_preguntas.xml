@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    tools:context=".PreguntasFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:text="Area:"
+            android:layout_marginStart="5dp"/>
+
+        <Spinner
+            android:id="@+id/spCategoria"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="3"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edtEnunciado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enunciado de la pregunta"
+            android:layout_marginBottom="20dp"/>
+
+        <EditText
+            android:id="@+id/edtOpcion1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Primera opcion"/>
+
+        <EditText
+            android:id="@+id/edtOpcion2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Segunda Opcion"/>
+
+        <EditText
+            android:id="@+id/edtOpcion3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tercera opcion"/>
+
+        <EditText
+            android:id="@+id/edtRespuesta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Respuesta"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnGuardarP"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:text="Guardar"/>
+        <Button
+            android:id="@+id/btnCancelar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:text="Cancelar"/>
+    </LinearLayout>
+
+</LinearLayout>
